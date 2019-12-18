@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    tools:context=".QuizActivity">
+
+    <TextView
+        android:id="@+id/text_view_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:freezesText="true"
+        android:text="Score: 0"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_view_question_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:freezesText="true"
+        android:text="Category: "
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toStartOf="@+id/text_view_score"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_score" />
+
+    <TextView
+        android:id="@+id/text_view_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:freezesText="true"
+        android:text="Difficulty: "
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toStartOf="@+id/text_view_question_count"
+        app:layout_constraintTop_toTopOf="@+id/text_view_question_count" />
+
+    <TextView
+        android:id="@+id/text_view_difficulty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:freezesText="true"
+        android:text="Difficulty: "
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toStartOf="@+id/text_view_category"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_category" />
+
+
+    <TextView
+        android:id="@+id/text_view_countdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="00:30"
+        android:textColor="@android:color/black"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_view_question"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="291dp"
+        android:text="Here will be write the question"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/radio_button1"
+        app:layout_constraintTop_toTopOf="parent" />
+<RadioGroup
+    android:id="@+id/radio_group"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RadioButton
+        android:id="@+id/radio_button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:freezesText="true"
+        android:text="Option 1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_question" />
+
+    <RadioButton
+        android:id="@+id/radio_button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:freezesText="true"
+        android:text="Option 2"
+        app:layout_constraintStart_toStartOf="@+id/radio_button1"
+        app:layout_constraintTop_toBottomOf="@+id/radio_button1" />
+
+    <RadioButton
+        android:id="@+id/radio_button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:freezesText="true"
+        android:text="Option 3"
+        app:layout_constraintStart_toStartOf="@+id/radio_button2"
+        app:layout_constraintTop_toBottomOf="@+id/radio_button2" />
+</RadioGroup>
+
+    <Button
+        android:id="@+id/button_comfirm_next"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:freezesText="true"
+        android:text="confirm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/radio_button3"
+        app:layout_constraintTop_toBottomOf="@+id/radio_button3" />
+
+</LinearLayout>
